@@ -45,8 +45,6 @@ namespace LibraryManagementSystemWeb.Controllers
        
                     t.WebUsers.Add(user);
                     t.SaveChanges();
-                    t.WebUsers.Add(user);
-                    t.SaveChanges();
                     return RedirectToAction("Index");
                 }
                 else
