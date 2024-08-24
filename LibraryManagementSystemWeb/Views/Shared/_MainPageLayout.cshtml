@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="~/web-LibraryManagement/style.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="header">
+        <img src="~/web-LibraryManagement/book.jpg" alt="Books Background" class="background-image">
+    </div>
+
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="/MainPage/Index">Main Page</a>
+            <a href="/Book/Index">Book Details</a>
+            <a href="/ChooseBook/BorrowedBooks">Borrowed Books</a>
+            <a href="/ChooseBook/Index">Take Book</a>
+        </div>
+    </div>
+
+    <div class="content">
+        @RenderBody()
+    </div>
+</body>
+</html>

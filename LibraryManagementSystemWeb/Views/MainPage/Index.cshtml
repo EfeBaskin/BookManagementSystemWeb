@@ -1,0 +1,31 @@
+﻿@using LibraryManagementSystemWeb.Models.Classes
+@using System.Collections.Generic
+@model List<WebUser>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainPageLayout.cshtml";
+}
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Id</th>
+        <th>İsim</th>
+        <th>Tel No</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @{int a = 0; }  
+    @foreach (var x in Model)
+    {
+        a++;
+        <tr>
+            <td>@a</td>
+            <td>@x.FullName</td>
+            <td>@x.PhoneNo</td>
+            <td><a href="/MainPage/BringUpdated/@x.UserId" class="btn btn-primary">Güncelle</a></td>
+            <td><a href="/MainPage/DeleteUser/@x.UserId" class="btn btn-danger">Kullanıcı Sil</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/MainPage/NewUser/" class="btn btn-primary">Yeni Kullanıcı Ekle</a>

@@ -1,0 +1,18 @@
+﻿@model LibraryManagementSystemWeb.Models.Classes.WebUser
+@{
+    ViewBag.Title = "NewUser";
+    Layout = "~/Views/Shared/_MainPageLayout.cshtml";
+}
+
+<h2>Yeni Kullanıcı Ekle</h2>
+<br />
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.FullName)
+    @Html.TextBoxFor(x => x.FullName, new { @class = "form-control"})
+    <br />
+    @Html.LabelFor(x => x.PhoneNo)
+    @Html.TextBoxFor(x => x.PhoneNo, new {@class = "form-control" })
+    <br />
+    <button class="btn btn-success">Yeni Kullanıcı Ekle</button>
+</form>

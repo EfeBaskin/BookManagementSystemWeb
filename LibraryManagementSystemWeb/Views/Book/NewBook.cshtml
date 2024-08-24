@@ -1,0 +1,21 @@
+﻿@model LibraryManagementSystemWeb.Models.Classes.Book
+@{
+    ViewBag.Title = "NewBook";
+    Layout = "~/Views/Shared/_MainPageLayout.cshtml";
+}
+
+<h2>Yeni Kitap Kaydı Ekle</h2>
+<br />
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.BookName)
+    @Html.TextBoxFor(x => x.BookName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.AuthorName)
+    @Html.TextBoxFor(x => x.AuthorName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.quantity)
+    @Html.TextBoxFor(x => x.quantity, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Yeni Kitap Kaydı Ekle</button>
+</form>

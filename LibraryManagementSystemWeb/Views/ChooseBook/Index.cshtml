@@ -1,0 +1,23 @@
+﻿@model LibraryManagementSystemWeb.Models.ViewModel.ViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainPageLayout.cshtml";
+}
+
+<h2>Take a Book</h2>
+
+@using (Html.BeginForm("Index", "ChooseBook", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="userSelect">Choose User:</label>
+        @Html.DropDownListFor(x => x.SelectedUserId, Model.Users, "-- Select an Option --", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="bookSelect">Choose Book:</label>
+        @Html.DropDownListFor(x => x.SelectedBookId, Model.Books, "-- Select an Option --", new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Take Book</button>
+}
+

@@ -1,0 +1,25 @@
+﻿@model LibraryManagementSystemWeb.Models.Classes.Book
+@{
+    ViewBag.Title = "BringUpdatedBook";
+    Layout = "~/Views/Shared/_MainPageLayout.cshtml";
+}
+
+<h2 class="mt-4">Kitap Bilgilerini Güncelle</h2>
+<br />
+
+@using (Html.BeginForm("UpdateBook", "Book", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.BookId)
+    @Html.TextBoxFor(x => x.BookId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.BookName)
+    @Html.TextBoxFor(x => x.BookName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.AuthorName)
+    @Html.TextBoxFor(x => x.AuthorName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.quantity)
+    @Html.TextBoxFor(x => x.quantity, new { @class = "form-control" })
+    <button class="btn btn-success">Kullanıcı Bilgileri Güncelle</button>
+}
+

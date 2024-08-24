@@ -1,0 +1,32 @@
+﻿@model IEnumerable<LibraryManagementSystemWeb.Models.Classes.TakeBook>
+
+@{
+    ViewBag.Title = "BorrowedBooks";
+    Layout = "~/Views/Shared/_MainPageLayout.cshtml";
+}
+
+<h2>Borrowed Books</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            @*<th>Phone Number</th>*@
+            <th>Book Name</th>
+            @*<th>Author Name</th>*@
+            <th>Borrowed Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                @*<td>@item.PhoneNo</td>*@
+                <td>@item.TakenBook</td>
+                @*<td>@item.AuthorName</td>*@
+                <td>@item.TakenDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
